@@ -155,13 +155,6 @@
             iconLoading: 'glyphicon glyphicon-refresh',
         }).addTo(map);
 
-        document.getElementById('about_link').onclick = function() {
-            bootbox.alert({
-                title: 'About',
-                message: document.getElementById('about').innerHTML
-            });
-        };
-
         search = new BR.Search();
         map.addControl(search);
 

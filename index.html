@@ -12,7 +12,87 @@
 <body>
     <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
         <a class="navbar-brand" href="#">BRouter-Web</a>
+        <div class="nav navbar-nav">
+            <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#help">
+                <span class="glyphicon glyphicon-book"></span>&nbsp;Help</a>
+            <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#about">
+                <span class="glyphicon glyphicon-info-sign"></span>&nbsp;About</a>
+        </div>
     </nav>
+
+    <!-- Help modal window -->
+    <div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help window" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Help</h4>
+                </div>
+                <div class="modal-body">
+                    <p>'esc' or 'q' to disable drawing, 'd' to enable drawing<p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About modal window -->
+    <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="About window" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Online service of the BRouter routing engine. For the offline Android app and more information
+                        see <a href="http://brouter.de/" target="_blank">brouter.de</a>.</p>
+                    <p><i>Work in progress:</i> The web client is still in (slow) development; it has some glitches,
+                        you might miss some essential features and stumble upon bugs. The user interface is subject to
+                        change.</p>
+                    <p>
+                        <i>Contact:</i><br>
+                        <ul>
+                            <li>
+                                general discussions/questions, support:<br>
+                                <a href="http://groups.google.com/group/osm-android-bikerouting" target="_blank">
+                                    http://groups.google.com/group/osm-android-bikerouting
+                                </a>
+                            </li>
+                            <li>bug reports and feature requests:
+                                <ul>
+                                    <li>
+                                        server / backend, routing engine, Android app, profiles, brouter.de site:<br>
+                                        <a href="https://github.com/abrensch/brouter/issues" target="_blank">
+                                            https://github.com/abrensch/brouter/issues
+                                        </a>
+                                    </li>
+                                    <li>
+                                        web client / frontend:<br>
+                                        <a href="https://github.com/nrenner/brouter-web/issues" target="_blank">
+                                            https://github.com/nrenner/brouter-web/issues
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <i>Data:</i> based on <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a>. It is usually updated once a week when a new Planet file is available,
+                        see dates of <a href="http://brouter.de/brouter/segments4/" target="_blank">data files</a>.
+                    </p>
+                    <p>
+                         <i><a href="https://github.com/nrenner/brouter-web#credits-and-licenses" target="_blank">Credits</a></i>,
+                         <i><a href="https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md" target="_blank">Changelog</a></i> and
+                         <i><a href="https://github.com/nrenner/brouter-web#readme" target="_blank">more info</a></i> on the client.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="content">
     <div id="map"></div>
@@ -61,45 +141,6 @@
                 <table id="datatable" class="table mini cell-border hover stripe"></table>
             </div>
         </div>
-    </div>
-    <div id="about">
-        <p>
-            Online service of the BRouter routing engine. For the offline Android app and more information see <a href="http://brouter.de/" target="_blank">brouter.de</a>.
-        </p>
-        <p>
-            <i>Work in progress:</i> The web client is still in (slow) development; it has some glitches,
-            you might miss some essential features and stumble upon bugs. The user interface is subject to change.
-        </p>
-        <p>
-            <i>Contact:</i><br>
-            <ul>
-                <li>
-                    general discussions/questions, support:<br>
-                    <a href="http://groups.google.com/group/osm-android-bikerouting" target="_blank">http://groups.google.com/group/osm-android-bikerouting</a>
-                </li>
-                <li>bug reports and feature requests:
-                    <ul>
-                        <li>
-                            server / backend, routing engine, Android app, profiles, brouter.de site:<br>
-                            <a href="https://github.com/abrensch/brouter/issues" target="_blank">https://github.com/abrensch/brouter/issues</a>
-                        </li>
-                        <li>
-                            web client / frontend:<br>
-                            <a href="https://github.com/nrenner/brouter-web/issues" target="_blank">https://github.com/nrenner/brouter-web/issues</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-        <p>
-            <i>Data:</i> based on <a href="http://www.openstreetmap.org" target="_blank">OpenStreetMap</a>. It is usually updated once a week when a new Planet file is available,
-            see dates of <a href="http://brouter.de/brouter/segments4/" target="_blank">data files</a>.
-        </p>
-        <p>
-             <i><a href="https://github.com/nrenner/brouter-web#credits-and-licenses" target="_blank">Credits</a></i>,
-             <i><a href="https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md" target="_blank">Changelog</a></i> and
-             <i><a href="https://github.com/nrenner/brouter-web#readme" target="_blank">more info</a></i> on the client.
-        </p>
     </div>
     </div>
 
