@@ -2,6 +2,14 @@ html, body, #map {
     height: 100%;
 }
 
+#content{
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 54px;
+}
+
 .info {
     padding: 6px 8px;
     font: 14px/16px "Helvetica Neue", Arial, Helvetica, sans-serif;
