@@ -1,8 +1,4 @@
 BR.RoutingOptions = BR.Control.extend({
-    options: {
-        heading: 'Options',
-        divId: 'route_options'
-    },
 
     onAdd: function (map) {
         var select = L.DomUtil.get('profile'),

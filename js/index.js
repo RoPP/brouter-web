@@ -139,7 +139,6 @@
             itinerary,
             elevation,
             download,
-            tabs,
             profile,
             trackMessages,
             routingToolbar,
@@ -150,13 +149,13 @@
         // left sidebar as additional control position
         map._controlCorners[leftPaneId] = L.DomUtil.create('div', 'leaflet-' + leftPaneId, map._controlContainer);
 
-        L.control.locate({
-            icon: 'glyphicon glyphicon-screenshot',
-            iconLoading: 'glyphicon glyphicon-refresh',
-        }).addTo(map);
+        // L.control.locate({
+        //     icon: 'glyphicon glyphicon-screenshot',
+        //     iconLoading: 'glyphicon glyphicon-refresh',
+        // }).addTo(map);
 
         search = new BR.Search();
-        map.addControl(search);
+        // map.addControl(search);
 
         router = L.bRouter(); //brouterCgi dummyRouter
 
@@ -344,27 +343,15 @@
         if (!BR.conf.transit) {
             map.addControl(new BR.Control({
                  heading: '',
-                 divId: 'header'
+                //  divId: 'header'
             }));
         }
         routingOptions.addTo(map);
         if (!BR.conf.transit) {
             stats.addTo(map);
         }
-        download.addTo(map);
+        // download.addTo(map);
         elevation.addTo(map);
-
-        tabs = new BR.Tabs({
-            tabs: {
-                '#tab_itinerary': itinerary,
-                '#tab_profile': profile,
-                '#tab_data': trackMessages
-            }
-        });
-        if (!BR.conf.transit) {
-            delete tabs.options.tabs['#tab_itinerary'];
-        }
-        map.addControl(tabs);
 
         nogos.addTo(map);
         routing.addTo(map);

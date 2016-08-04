@@ -17,7 +17,25 @@
                 <span class="glyphicon glyphicon-book"></span>&nbsp;Help</a>
             <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#about">
                 <span class="glyphicon glyphicon-info-sign"></span>&nbsp;About</a>
+            <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#options">
+                <span class="glyphicon glyphicon-option-vertical"></span>&nbsp;Options</a>
+            <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="glyphicon glyphicon-cloud-download"></span>&nbsp;Download</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" id="dl-gpx" href="#" disabled>GPX</a>
+                    <a class="dropdown-item" id="dl-kml" href="#" disabled>KML</a>
+                    <a class="dropdown-item" id="dl-geojson" href="#" disabled>GeoJSON</a>
+                    <a class="dropdown-item" id="dl-csv" href="#" disabled>data CSV</a>
+                </div>
+            </div>
         </div>
+        <form class="form-inline pull-xs-right" style="position: relative;">
+            <input class="form-control w-100" type="text" placeholder="Search">
+            <a class="text-primary" style="position: absolute; right: 5px; top: 5px;" href="#" id="whereami">
+                <small>Where am I?</small>
+            </a>
+        </form>
     </nav>
 
     <!-- Help modal window -->
@@ -94,29 +112,57 @@
         </div>
     </div>
 
+    <!-- Options modal window -->
+    <div class="modal fade" id="options" tabindex="-1" role="dialog" aria-labelledby="Help window" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Options</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="profile">Profile:</label>
+                            <select class="form-control" id="profile">
+                                <option disabled>Custom</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="alternative">Alternative:</label>
+                            <select class="form-control" id="alternative">
+                                <option value="0" selected>Original</option>
+                                <option value="1">1st alternative</option>
+                                <option value="2">2nd alternative</option>
+                                <option value="3">3rd alternative</option>
+                            </select>
+                        </div>
+                    </form>
+                    <form>
+                        <label for="profile_upload">Custom routing profile:</label>
+                        <textarea class="form-control" type="text" id="profile_upload" spellcheck="false" wrap="off" rows="5"></textarea>
+                        <div id="profile_message"></div>
+                        <div class="form-group" id="profile_buttons">
+                            <button id="upload" type="button" class="btn btn-sm" data-uploading-text="Uploading..."><span class="glyphicon glyphicon-upload"></span> Upload</button>
+                            <button id="clear" type="button" class="btn btn-sm"><span class="glyphicon glyphicon-ban-circle"></span> Clear</button>
+                            <a href="http://brouter.de/brouter/costfunctions.html" target="_blank" class="btn-sm pull-xs-right">Help</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="content">
     <div id="map"></div>
 
     <div id="message"></div>
-    </div>
-    <div id="route_options" class="hidden">
-        <table>
-            <tr><td>Profile:</td>
-                <td><select id="profile">
-                        <option value="" disabled>&lt;custom&gt;</option>
-                        <!-- profile option list built dynamically from config -->
-                    </select></td></tr>
-            <tr><td>Alternative:</td>
-                <td><select id="alternative">
-                        <option value="0">original</option>
-                        <option value="1">first alternative</option>
-                        <option value="2">second alternative</option>
-                        <option value="3">third alternative</option>
-                    </select>
-                </td></tr>
-        </table>
-    </div>
-    <div id="tabs_div" class="hidden">
+    <div id="itinerary"></div>
+    <div id="datatable"></div>
+
+    <!-- <div id="tabs_div" class="hidden">
 
         <ul id="tab" class="nav nav-tabs" role="tablist">
         </ul>
@@ -141,7 +187,7 @@
                 <table id="datatable" class="table mini cell-border hover stripe"></table>
             </div>
         </div>
-    </div>
+    </div> -->
     </div>
 
     <script>

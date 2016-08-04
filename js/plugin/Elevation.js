@@ -1,7 +1,6 @@
 BR.Elevation = L.Control.Elevation.extend({
     options: {
-        position: "leftpane",
-        width: 385,
+        position: "bottomleft",
         margins: {
             top: 20,
             right: 30,

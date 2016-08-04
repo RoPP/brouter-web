@@ -10,22 +10,11 @@ html, body, #map {
     top: 54px;
 }
 
-.info {
-    padding: 6px 8px;
-    font: 14px/16px "Helvetica Neue", Arial, Helvetica, sans-serif;
-  	box-shadow: 0px 0px 0px 3px rgba(70,130,180,0.2), 0 1px 5px rgba(0,0,0,0.4);
-    background: rgba(255,255,255,0.9);
-    border-radius: 5px;
-}
 .leaflet-control.elevation .background {
     box-shadow: 0px 0px 0px 3px rgba(70,130,180,0.2);
 }
 div.elevation {
     margin-bottom: -2px !important;
-}
-
-.hidden {
-    display: none;
 }
 
 #message {
@@ -36,30 +25,6 @@ div.elevation {
     z-index: 1000;
 }
 
-#header {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-#header, .heading {
-    color: #333;
-}
-.title {
-    padding-top: 4px;
-}
-.title-name {
-    font-size: larger;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-}
-.version {
-    font-size: x-small;
-}
-.header-text {
-    font-size: small;
-    margin-top: 0.5em;
-    line-height: 1.4em;
-}
-
 .heading {
     font-weight: bold;
 }
@@ -67,138 +32,17 @@ div.elevation {
     float: left;
 }
 
-select {
-    max-width: 176px;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 4px;
-    /* spacing between cells only */
-    margin: -4px;
-}
-
-td {
-    vertical-align: top;
-    padding: 0;
-}
-#stats td:nth-child(2) {
-    text-align: right;
-}
-
-.heading, tr > td:first-child, .label {
-    /* 1/4 of net info control width (370), so that values start at 50% */
-    width: 95px;
-}
-
 .routing-draw-enabled {
 	cursor: crosshair;
 }
 
-/* left sidebar as additional control position */
-
-.leaflet-left {
-	left: 400px !important;
-}
-
 .leaflet-leftpane {
-	left: 5px;
-    top: 7px;
-    bottom: 7px;
-
-    position: absolute;
-    z-index: 1000;
-    pointer-events: none;
-}
-
-.leaflet-leftpane .leaflet-control {
-    margin: 3px 5px;
-    width: 386px;
+    display: none;
 }
 
 /* margin left sidebar + Scale */
 .leaflet-control-attribution {
     margin-left: 515px !important;
-}
-
-/* Profile Control */
-
-/* flexbox layout: maximize textarea and data table (nested container/box path) */
-.flex_container,
-.leaflet-leftpane,
-.leaflet-leftpane .leaflet-control:last-child,
-#tabs_div,
-.tab-content,
-.tab-pane.active,
-#profile_upload,
-#datatable_wrapper,
-.dataTables_scroll,
-.dataTables_scrollBody,
-#iternity {
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.flex_box_none,
-.leaflet-leftpane .leaflet-control,
-#tab,
-.dataTables_scrollHead {
-  -webkit-flex: none;
-  flex: none;
-}
-
-.flex_box,
-.leaflet-leftpane .leaflet-control:last-child,
-#tabs_div,
-.tab-content,
-.tab-pane.active,
-#profile_upload,
-textarea,
-#datatable_wrapper,
-.dataTables_scroll,
-.dataTables_scrollBody,
-#datatable,
-#iternity,
-#iternity pre {
-  -webkit-flex: auto;
-  flex: auto;
-}
-
-#iternity pre {
-    font-size: small;
-    /* turn off bootstrap 'break-word' */
-    word-wrap: normal;
-}
-
-#profile_buttons {
-    padding-top: 4px;
-}
-
-textarea {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-
-    font-size: 10px;
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1.2em;
-
-    background-color: rgba(255,255,255,0);
-}
-textarea:focus {
-    background-color: rgba(255,255,255,255);
-}
-
-/* track messages (data tab) */
-#tab_data {
-    font-size: x-small;
-}
-
-#about {
-    display: none;
 }
 
 /* dashed line animation, derived from Chris Coyier and others
@@ -327,7 +171,7 @@ table.dataTable.display tbody tr.even:hover {
   box-sizing: border-box;
   background: none;
 
-  /* bootstrap .btn-default */ 
+  /* bootstrap .btn-default */
   background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
   background-repeat: repeat-x;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
