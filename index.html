@@ -11,31 +11,36 @@
 </head>
 <body>
     <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-        <a class="navbar-brand" href="#">BRouter-Web</a>
-        <div class="nav navbar-nav">
-            <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#help">
-                <span class="glyphicon glyphicon-book"></span>&nbsp;Help</a>
-            <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#about">
-                <span class="glyphicon glyphicon-info-sign"></span>&nbsp;About</a>
-            <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#options">
-                <span class="glyphicon glyphicon-option-vertical"></span>&nbsp;Options</a>
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    <span class="glyphicon glyphicon-cloud-download"></span>&nbsp;Download</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" id="dl-gpx" href="#" disabled>GPX</a>
-                    <a class="dropdown-item" id="dl-kml" href="#" disabled>KML</a>
-                    <a class="dropdown-item" id="dl-geojson" href="#" disabled>GeoJSON</a>
-                    <a class="dropdown-item" id="dl-csv" href="#" disabled>data CSV</a>
+        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+            <a class="navbar-brand" href="#">BRouter-Web</a>
+            <form class="form-inline pull-xs-right" style="position: relative;">
+                <input class="form-control w-100" type="text" placeholder="Search" id="search">
+                <a class="text-primary" style="position: absolute; right: 5px; top: 5px;" href="#" id="whereami">
+                    <small>Where am I?</small>
+                </a>
+            </form>
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#help">
+                    <span class="glyphicon glyphicon-book"></span>&nbsp;Help</a>
+                <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#about">
+                    <span class="glyphicon glyphicon-info-sign"></span>&nbsp;About</a>
+                <a class="nav-item nav-link" href="" data-toggle="modal" data-target="#options">
+                    <span class="glyphicon glyphicon-option-vertical"></span>&nbsp;Options</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-cloud-download"></span>&nbsp;Download</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" id="dl-gpx" href="#" disabled>GPX</a>
+                        <a class="dropdown-item" id="dl-kml" href="#" disabled>KML</a>
+                        <a class="dropdown-item" id="dl-geojson" href="#" disabled>GeoJSON</a>
+                        <a class="dropdown-item" id="dl-csv" href="#" disabled>data CSV</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <form class="form-inline pull-xs-right" style="position: relative;">
-            <input class="form-control w-100" type="text" placeholder="Search">
-            <a class="text-primary" style="position: absolute; right: 5px; top: 5px;" href="#" id="whereami">
-                <small>Where am I?</small>
-            </a>
-        </form>
     </nav>
 
     <!-- Help modal window -->
