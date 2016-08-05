@@ -149,10 +149,10 @@
         // left sidebar as additional control position
         map._controlCorners[leftPaneId] = L.DomUtil.create('div', 'leaflet-' + leftPaneId, map._controlContainer);
 
-        // L.control.locate({
-        //     icon: 'glyphicon glyphicon-screenshot',
-        //     iconLoading: 'glyphicon glyphicon-refresh',
-        // }).addTo(map);
+        L.control.locate({
+            icon: 'glyphicon glyphicon-screenshot',
+            iconLoading: 'glyphicon glyphicon-refresh',
+        }).addTo(map);
 
         search = new BR.Search();
         // map.addControl(search);
