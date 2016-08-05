@@ -360,6 +360,14 @@
             profile: profile
         }).addTo(map);
 
+        // FIXME permalink temporary hack
+        $('#permalink').on('click', function() {
+            $('#permalink-input').val($('.leaflet-control-permalink a')[0].href)
+        })
+        $('#permalink-input').on('click', function() {
+            $(this).select()
+        })
+
         L.control.scale().addTo(map);
     }
 

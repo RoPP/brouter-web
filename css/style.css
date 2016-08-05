@@ -10,6 +10,11 @@ html, body, #map {
     top: 54px;
 }
 
+/* FIXME permalink temporary hack */
+.leaflet-control-permalink {
+    display: none;
+}
+
 .leaflet-control.elevation .background {
     box-shadow: 0px 0px 0px 3px rgba(70,130,180,0.2);
 }
