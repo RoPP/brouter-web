@@ -23,7 +23,7 @@
     "url-search-params": "~0.5.0",
     "Leaflet.RestoreView": "makinacorpus/Leaflet.RestoreView#master",
     "leaflet.locatecontrol": "^0.52.0",
-    "glyphicons": "^0.0.2"
+    "font-awesome": "fontawesome#^4.6.3"
   },
   "overrides": {
     "leaflet": {
@@ -60,9 +60,7 @@
     "bootstrap": {
       "main": [
         "dist/js/bootstrap.js",
-        "dist/css/bootstrap.css",
-        "dist/css/bootstrap-theme.css",
-        "dist/fonts/*"
+        "dist/css/bootstrap.css"
       ]
     },
     "leaflet.elevation": {
@@ -83,11 +81,18 @@
     "url-search-params": {
       "main": "build/url-search-params.js"
     },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/*"
+      ]
+    },
     "Leaflet.RestoreView": {
       "main": "leaflet.restoreview.js"
     }
   },
   "resolutions": {
-    "leaflet.elevation": "master"
+    "leaflet.elevation": "master",
+    "font-awesome": "^4.6.3"
   }
 }

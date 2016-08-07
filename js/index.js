@@ -134,10 +134,7 @@
         // left sidebar as additional control position
         map._controlCorners[leftPaneId] = L.DomUtil.create('div', 'leaflet-' + leftPaneId, map._controlContainer);
 
-        L.control.locate({
-            icon: 'glyphicon glyphicon-screenshot',
-            iconLoading: 'glyphicon glyphicon-refresh',
-        }).addTo(map);
+        L.control.locate().addTo(map);
 
         search = new BR.Search();
         // map.addControl(search);
@@ -147,7 +144,7 @@
         drawButton = L.easyButton({
             states: [{
                 stateName: 'deactivate-draw',
-                icon: 'glyphicon-ok',
+                icon: 'fa-check',
                 onClick: function (control) {
                     routing.draw(false);
                     control.state('activate-draw');
@@ -155,7 +152,7 @@
                 title: 'Stop drawing route'
             }, {
                 stateName: 'activate-draw',
-                icon: 'glyphicon-road',
+                icon: 'fa-road',
                 onClick: function (control) {
                     routing.draw(true);
                     control.state('deactivate-draw');
@@ -165,7 +162,7 @@
         });
 
         deleteButton = L.easyButton(
-            'glyphicon-trash',
+            'fa-trash',
             function () {
                 bootbox.confirm({
                     size: 'small',
