@@ -329,9 +329,6 @@
             }));
         }
         routingOptions.addTo(map);
-        if (!BR.conf.transit) {
-            stats.addTo(map);
-        }
         // download.addTo(map);
         elevation.addTo(map);
 

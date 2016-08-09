@@ -23,9 +23,12 @@ BR.RoutingOptions = BR.Control.extend({
     },
 
     getOptions: function() {
+        var profile = L.DomUtil.get('profile').value,
+            alternative = L.DomUtil.get('alternative').value;
+        $('#stat-profile').html(profile + ' (' + alternative +')');
         return {
-            profile: L.DomUtil.get('profile').value,
-            alternative: L.DomUtil.get('alternative').value
+            profile: profile,
+            alternative: alternative
         };
     },
 
@@ -41,7 +44,6 @@ BR.RoutingOptions = BR.Control.extend({
             if (select.value != profile) {
                 this.setCustomProfile(profile, true);
             }
-
         }
         if (options.alternative) {
             L.DomUtil.get('alternative').value = options.alternative;
