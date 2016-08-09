@@ -2,12 +2,16 @@ html, body, #map {
     height: 100%;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
 #content{
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    top: 54px;
+    flex-grow: 1;
+}
+
+.routing-draw-enabled {
+    cursor: crosshair;
 }
 
 /* FIXME permalink temporary hack */
@@ -15,11 +19,9 @@ html, body, #map {
     display: none;
 }
 
-.leaflet-control.elevation .background {
-    box-shadow: 0px 0px 0px 3px rgba(70,130,180,0.2);
-}
-div.elevation {
-    margin-bottom: -2px !important;
+/* FIXME */
+.elevation {
+    display: none;
 }
 
 #message {
@@ -28,26 +30,6 @@ div.elevation {
     top: 0px;
     margin-top: 10px;
     z-index: 1000;
-}
-
-.heading {
-    font-weight: bold;
-}
-.heading, .content, .content > .label, .content > .value {
-    float: left;
-}
-
-.routing-draw-enabled {
-	cursor: crosshair;
-}
-
-.leaflet-leftpane {
-    display: none;
-}
-
-/* margin left sidebar + Scale */
-.leaflet-control-attribution {
-    margin-left: 515px !important;
 }
 
 /* dashed line animation, derived from Chris Coyier and others
@@ -72,67 +54,6 @@ div.elevation {
   to {
     stroke-dashoffset: 0;
   }
-}
-
-/*
- * Bootstrap
- */
-
-/* override Bootstrap label for Leaflet layer switcher */
-.leaflet-control-layers label {
-    max-width: none;
-    margin-bottom: 0px;
-    font-weight: normal;
-    /* normalize label height
-                    | Firefox | Chrome |
-       Leaflet only | 21      | 20     |
-       Bootstrap    | 23      | 22     |*/
-    height: 21px;
-}
-
-/* smaller tab height */
-.nav > li > a {
-    padding: 2px 15px;
-}
-
-.alert {
-    margin-top: 3px;
-    margin-bottom: 0px;
-    padding-left: 35px;
-}
-.alert span.glyphicon {
-    position: relative;
-    left: -23px;
-    margin-right: -1em;
-}
-
-/*
- * DataTables
- */
-
-table.dataTable.mini thead th,
-table.dataTable.mini thead td {
-  padding: 3px 13px 3px 2px;
-}
-
-table.dataTable.mini tbody th,
-table.dataTable.mini tbody td {
-  padding: 2px 2px;
-  white-space: nowrap;
-}
-table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting_desc,
-table.dataTable thead .sorting {
-  background-position: center right -3px;
-}
-
-table.dataTable.hover tbody tr:hover,
-table.dataTable.hover tbody tr.odd:hover,
-table.dataTable.hover tbody tr.even:hover,
-table.dataTable.display tbody tr:hover,
-table.dataTable.display tbody tr.odd:hover,
-table.dataTable.display tbody tr.even:hover {
-  background-color: rgba(255,255,0,0.2);
 }
 
 /*
