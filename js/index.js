@@ -215,6 +215,13 @@
         }
         download = new BR.Download();
         elevation = new BR.Elevation();
+        $(window).resize(function () {
+            elevation.resize();
+        });
+        $('#elevation-chart').on('shown.bs.collapse', function() {
+            elevation.resize();
+        });
+
         profile = new BR.Profile();
         profile.on('update', function(evt) {
             BR.message.hide();
@@ -330,7 +337,6 @@
         }
         routingOptions.addTo(map);
         // download.addTo(map);
-        elevation.addTo(map);
 
         nogos.addTo(map);
         routing.addTo(map);

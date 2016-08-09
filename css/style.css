@@ -24,6 +24,32 @@ footer {
     margin: 0 1rem;
 }
 
+#elevation-chart {
+    height: 150px;
+    font-size: 80%;
+}
+
+.axis path,
+.axis line {
+    stroke: #818a91;
+    fill: none;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    fill: #818a91;
+}
+
+.area {
+    fill: rgba(129, 138, 145, 0.45);
+}
+
+#elevation-btn {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
 .routing-draw-enabled {
     cursor: crosshair;
 }
